@@ -26,4 +26,4 @@ jobs:
     - name: Set variable here
       run: echo ${{ env.CITY }}
     env:
-      key1: ${{ env.CITY }}${{ env.ADMIN }}
+      key1: ${{ env.CITY }}
