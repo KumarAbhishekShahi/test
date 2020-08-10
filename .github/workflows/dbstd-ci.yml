@@ -7,20 +7,21 @@ on:
   repository_dispatch:
     types: [ exec-workflow ]
     branches: master
+env:
+  ADMIN: Kumar
+  CITY: Pune
  
 jobs:
   CI:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Set variable here
-      run: echo Setting Variables here
-      env:
-        ADMIN: Kumar
-        CITY: Pune
+    - name: Printing variable here
+      run: echo env.ADMIN
+
   CD:
     runs-on: ubuntu-latest
     
     steps:
     - name: Set variable here
-      run: echo ${{ jobs.CI.steps.env.ADMIN }}
+      run: echo ${{ env.CITY }}
