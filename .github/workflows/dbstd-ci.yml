@@ -23,4 +23,4 @@ jobs:
     
     steps:
     - name: Set variable here
-      run: echo $ADMIN $CITY
+      run: echo ${{ jobs.CI.steps.env.ADMIN }}
