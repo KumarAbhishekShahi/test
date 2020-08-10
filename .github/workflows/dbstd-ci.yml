@@ -17,7 +17,7 @@ jobs:
     
     steps:
     - name: Printing variable here
-      run: echo env.ADMIN
+      run: echo ${{ env.ADMIN }}
 
   CD:
     runs-on: ubuntu-latest
@@ -25,3 +25,5 @@ jobs:
     steps:
     - name: Set variable here
       run: echo ${{ env.CITY }}
+    env:
+      key1: ${{ env.CITY }} and ${{ env.ADMIN }}
